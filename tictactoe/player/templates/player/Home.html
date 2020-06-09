@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome, {{user.username}}!</title>
+</head>
+<body>
+    There are currently {{gameCount}} games recorded in the database involving you. <br/>
+    These are your active games: <br/> <br/>
+
+    <ul>
+        {% for game in games %}
+            <li> Game {{game.id}}: {{game.firstPlayer}} vs {{game.secondPlayer}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
